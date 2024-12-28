@@ -55,35 +55,35 @@ Prerequisites
 
 Steps
 
-    Clone the repository:
+Clone the repository:
 
-git clone https://github.com/your-username/c-codebase-library.git
-cd c-codebase-library
+`git clone https://github.com/your-username/c-codebase-library.git
+cd c-codebase-library`
 
 Compile and build:
 
-gcc -o program main.c base.c
+`gcc -o program main.c base.c`
 
 Run the program:
 
-    ./program
+    ./program    
 
 Examples
 Memory Arena Allocation
 
-Arena arena = arena_create(1024);
+`Arena arena = arena_create(1024);
 void* block = arena_alloc(&arena, 256);
 arena_reset(&arena);
-arena_destroy(&arena);
+arena_destroy(&arena);`
 
 UTF-8 String Manipulation
 
-String utf8_str = utf8_create_literal("Hello, 世界!");
-printf("String: %s, Length: %d\n", utf8_str.data, utf8_str.length);
+`String utf8_str = utf8_create_literal("Hello, 世界!");
+printf("String: %s, Length: %d\n", utf8_str.data, utf8_str.length);`
 
 Math Utilities
 
-F32 clamped = Clamp(0.0f, 5.0f, 10.0f); // Output: 5.0
+`F32 clamped = Clamp(0.0f, 5.0f, 10.0f); // Output: 5.0`
 
 License
 
