@@ -1,8 +1,8 @@
-C Codebase Library
-Overview
+###C Codebase Library
+#Overview
 
 This project provides a comprehensive library of C macros, utility functions, data structures, and memory management tools to streamline and enhance low-level programming. Designed for versatility and efficiency, the library includes advanced support for mathematical operations, UTF string manipulation, memory management, and common data structures like linked lists, stacks, and queues.
-Features
+#Features
 
     Macros for Simplified Development:
         Memory management (MemoryZero, MemoryCopy, etc.).
@@ -25,7 +25,7 @@ Features
         Platform and architecture detection.
         Symbolic constants for system-level programming.
 
-Code Structure
+#Code Structure
 
     base.h:
         Header file containing macros, type definitions, and function declarations.
@@ -34,13 +34,13 @@ Code Structure
     main.c:
         Example and test cases for edge scenarios of the library functions.
 
-Build and Run
-Prerequisites
+#Build and Run 
+#Prerequisites
 
     A C compiler (e.g., GCC, Clang, MSVC).
     Optional: Makefile for automating the build process.
 
-Steps
+#Steps
 
     Clone the repository:
 
@@ -55,7 +55,7 @@ Run the program:
 
     ./program
 
-Examples
+#Examples
 
     Memory Arena Allocation:
 
