@@ -72,6 +72,65 @@ function DayOfWeek get_current_day_of_week(void) {
     default: return DayOfWeek_Monday; 
     }
 }
+//////////////////////////////////////////////////////
+// NOTE(ryl1k): MyPrintf()
+#include <stdarg.h>
+
+function void printint(int val) {
+    if (val == 0) {
+        putchar('0');
+        return;
+    }
+    if (val < 0) {
+        putchar('-');
+        val = -val;
+    }
+    char buffer[12]; 
+    int index = 0;
+    while (val > 0) {
+        buffer[index++] = '0' + (val % 10);
+        val /= 10;
+    }
+
+    for (int i = index - 1; i >= 0; i--) {
+        putchar(buffer[i]);
+    }
+}
+
+function int myprintf(const char* format, ...) {
+    va_list args;
+    va_start(args, format);
+    int printed_chars = 0;
+
+    for (int i = 0; format[i] != '\0'; i++) {
+        if (format[i] == '%') {
+            i++;
+            if (format[i] == 'd') {
+                int val = va_arg(args, int);
+                printint(val);
+            }else if (format[i] == 'c') {
+                char val = va_arg(args, char);
+                putchar(val);
+            }else if (format[i] == 's') {
+                char* val = va_arg(args, char*);
+                for (int j = 0; val[j] != '\0'; j++) {
+                    putchar(val[j]);
+                }
+            }
+            else if (format[i] == '%') { 
+                putchar('%');
+            }
+        }
+        else {
+            putchar(format[i]);
+            printed_chars++;
+        }
+    }
+    va_end(args);
+    return printed_chars;
+}
+
+
 
 //////////////////////////////////////////////////////
 // NOTE(ryl1k): Memory Functions

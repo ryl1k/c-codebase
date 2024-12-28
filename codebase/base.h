@@ -122,7 +122,8 @@ typedef struct {
     Encoding encoding;
 } String;
 
-
+function void printint(int val);
+function int myprintf(const char* str, ...);
 
 #define string(literal) string_create_literal(literal)
 

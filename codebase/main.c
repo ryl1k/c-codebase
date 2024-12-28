@@ -282,5 +282,9 @@ int main() {
     test_miscellaneous_edge_cases();
 
     printf("\nAll edge case tests completed!\n");
+
+    myprintf("Hello %s, the number is %d and char is %c\n", "World", 123, 'A');
+    myprintf("Negative number: %d\n", -456);
+    myprintf("Percent sign: %%\n");
     return 0;
 }
